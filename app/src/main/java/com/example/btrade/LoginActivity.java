@@ -20,27 +20,16 @@ public class LoginActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        logbtn = findViewById(R.id.loginbtn);
-        signup= findViewById(R.id.noacc);
-        edt_user = findViewById(R.id.username);
-        edt_pass = findViewById(R.id.pass);
-        textView=findViewById(R.id.text_dont);
-        /*textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-                startActivity(intent);
-            }
-        });*/
-        signup.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_login2);
 
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(intent);
             }
         });
+
         logbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

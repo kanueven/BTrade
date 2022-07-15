@@ -23,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
         reg = findViewById(R.id.register);
         user = findViewById(R.id.usernamereg);
         pass = findViewById(R.id.passreg);
