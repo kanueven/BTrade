@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            android:id="@+id/nav_home"
+            android:title="home" />
+
+        <item
+            android:icon="@drawable/ic_baseline_search_24"
+            android:id="@+id/nav_search"
+            android:title="search" />
+        <item
+            android:icon="@drawable/ic_baseline_category_24"
+            android:id="@+id/nav_all_categories"
+            android:title="all categories" />
+        <item
+            android:icon="@drawable/upload"
+            android:id="@+id/nav_add_missing_place"
+            android:title="upload" />
+
+    </group>
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:icon="@drawable/ic_baseline_login_24"
+                    android:id="@+id/nav_login"
+                    android:title="login" />
+                <item
+                    android:icon="@drawable/person_outline"
+                    android:id="@+id/nav_profile"
+                    android:title="profile" />
+                <item
+                    android:icon="@drawable/ic_baseline_close_24"
+                    android:id="@+id/nav_logout"
+                    android:title="logout" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Categories">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:icon="@drawable/ic_baseline_home_24"
+                    android:id="@+id/nav_household"
+                    android:title="household" />
+                <item
+                    android:icon="@drawable/ic_baseline_two_wheeler_24"
+                    android:id="@+id/nav_electronics"
+                    android:title="electronics" />
+                <item
+                    android:icon="@drawable/ic_baseline_library_books_24"
+                    android:id="@+id/nav_education"
+                    android:title="education" />
+                <item
+                    android:icon="@drawable/ic_baseline_rowing_24"
+                    android:id="@+id/nav_service"
+                    android:title="service" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,5 +1,14 @@
 package com.example.btrade;
 
+import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -7,20 +16,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Adapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     RecyclerView recyclerView,trendyrecyclerview,categrecyclerview;
@@ -113,6 +111,17 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_all_categories:
+                Intent intent = new Intent(getApplicationContext(), AllCategory.class);
+                startActivity(intent);
+                break;
+
+            case R.id.nav_login:
+                Intent login = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(login);
+                break;
+        }
         return true;
     }
 

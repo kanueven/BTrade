@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="30dp"
+    android:transitionName="transition_login"
+    tools:context=".StartupActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_wallet"/>
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SWAP ITEMS"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:id="@+id/as"
+        android:layout_above="@+id/btn_login"/>
+
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:text="LOGIN"
+        android:onClick="callLoginScreen"
+        android:textColor="#fff"
+        android:transitionName="transition_login"
+        android:background="@drawable/buttonbck"
+        tools:ignore="UsingOnClickInXml">
+
+    </Button>
+
+    <Button
+        android:layout_below="@+id/btn_login"
+        android:layout_marginTop="24dp"
+        android:id="@+id/btn_signup"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="callSgninScreen"
+        android:layout_width="match_parent"
+        android:text="Signup"
+        android:textColor="#fff"
+        android:background="@drawable/buttonbck">
+
+    </Button>
+
+</LinearLayout>
+
+</ScrollView>

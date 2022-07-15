@@ -1,59 +1,56 @@
-package com.example.btrade;
+package com.example.btrade
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent
+import android.os.Bundle
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.btrade.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+class LoginActivity : AppCompatActivity(), View.OnClickListener {
+    private lateinit var auth: FirebaseAuth
+    private lateinit var binding: ActivityLoginBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        auth = Firebase.auth
+        binding = ActivityLoginBinding.inflate(layoutInflater)
 
-public class LoginActivity extends AppCompatActivity {
-    Button logbtn,signup;
-    EditText edt_user,edt_pass;
-    TextView textView;
-    ProgressDialog progressDialog;
+        setContentView(binding.root)
+        binding.btnCreate.setOnClickListener(this)
+        binding.btnLogIn.setOnClickListener(this)
+    }
 
-
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login2);
-
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-                startActivity(intent);
+    override fun onClick(view: View?) {
+        when(view!!.id){
+            binding.btnCreate.id -> {
+                val intent = Intent(this,RegisterActivity::class.java)
+                startActivity(intent)
             }
-        });
-
-        logbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String username=edt_user.getText().toString();
-                String password=edt_pass.getText().toString();
-                if (username.isEmpty() && password.isEmpty()) {
-                    Toast.makeText(LoginActivity.this,
-                            "Please enter all credentials",
-                            Toast.LENGTH_SHORT).show();
-                }else if (username.isEmpty()) {
-                    Toast.makeText(LoginActivity.this,
-                            "Please enter email",
-                            Toast.LENGTH_SHORT).show();
-                }
-                else if (password.isEmpty()) {
-                    Toast.makeText(LoginActivity.this,
-                            "Please enter PASSWORD",
-                            Toast.LENGTH_SHORT).show();
+            binding.btnLogIn.id -> {
+                val email = binding.edtEmailLogin.text.toString()
+                val pass = binding.edtPassword.text.toString()
+                if (validate(email,pass)){
+                    auth.signInWithEmailAndPassword(email,pass)
+                        .addOnCompleteListener {
+                            if (it.isSuccessful){
+                                val intent = Intent(this,DashboardActivity::class.java)
+                                startActivity(intent)
+                            }else{
+                                Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()
+                            }
+                        }
                 }else{
-                    Intent sign=new Intent(LoginActivity.this,DashboardActivity.class);
-                    startActivity(sign);
+                    Toast.makeText(this, "Blank fields", Toast.LENGTH_SHORT).show()
+
                 }
             }
+        }
+    }
 
-        });
+    private fun validate(email: String?, pass: String?): Boolean {
+        return !(email.isNullOrEmpty() or pass.isNullOrEmpty())
     }
 }
