@@ -1,4 +1,4 @@
-package com.example.btrade
+package com.example.btrade.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -36,7 +36,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                                     .addOnCompleteListener {
                                         if (task.isSuccessful){
                                             Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
-                                            val intent = Intent(this,DashboardActivity::class.java)
+                                            val intent = Intent(this, DashboardActivity::class.java)
                                             startActivity(intent)
                                         }
                                     }

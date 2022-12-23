@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="2dp"
+    android:layout_marginEnd="150dp"
     android:elevation="8dp">
     <RelativeLayout
 
@@ -17,27 +18,27 @@
             android:layout_height="150dp"
             android:src="@drawable/bk_ap"
             android:scaleType="centerCrop"
-        />
+            android:contentDescription="@string/category_image" />
         <TextView
             android:id="@+id/ms_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Form 4 book"
-            android:layout_toRightOf="@+id/ms_img"
+            android:text="@string/form_4_book"
+            android:layout_toEndOf="@+id/ms_img"
             android:textSize="20sp"
             android:fontFamily="sans-serif"
             />
+
         <TextView
             android:id="@+id/ms_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ms_title"
-            android:text="Was lastly used this year,covered with few writing"
-            android:layout_toRightOf="@+id/ms_img"
-            android:textSize="20sp"
-            android:padding="10dp"
+            android:layout_toEndOf="@+id/ms_img"
             android:fontFamily="sans-serif"
-            />
+            android:padding="10dp"
+            android:text="@string/was_lastly_used_this_year_covered_with_few_writing"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 

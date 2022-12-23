@@ -7,8 +7,30 @@
     android:layout_marginTop="10dp"
     android:layout_marginEnd="10dp"
     app:cardCornerRadius="6dp"
-    tools:context=".chats">
+    tools:context=".Chats">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        >
+
+        <ImageView
+            android:id="@+id/chat_back_pressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
 <RelativeLayout
+    android:layout_marginTop="45dp"
+    android:id="@+id/cardd"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp">
@@ -25,7 +47,7 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
         android:layout_toRightOf="@+id/img_user"
-        android:text="Name"
+        android:text="Harmoney"
         android:textColor="@color/black"
         android:textSize="16sp" />
 
@@ -33,10 +55,10 @@
         android:id="@+id/cht_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
-        android:text="Time"
-        android:layout_alignParentRight="true"
+        android:text="10:00am"
         android:textColor="@color/black"
         android:textSize="16sp" />
 
@@ -46,6 +68,50 @@
        android:text="let's meet at 3pm outside Maasai mall"
        android:layout_below="@id/cht_name"  android:layout_marginStart="10dp"
        android:layout_marginTop="15dp" android:layout_toRightOf="@id/img_user"/>
+</RelativeLayout>
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="150dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/furn" />
+
+    <TextView
+        android:id="@+id/cht_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:layout_toRightOf="@+id/img_user1"
+        android:text="John"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cht_time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:text="9:30pm"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cht_name1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/img_user1"
+        android:text="let's meet tomorrow around 8am outside the main quickmart supermarket" />
 </RelativeLayout>
 </androidx.cardview.widget.CardView>
 

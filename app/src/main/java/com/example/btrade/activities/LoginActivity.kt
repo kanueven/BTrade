@@ -1,4 +1,4 @@
-package com.example.btrade
+package com.example.btrade.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         when(view!!.id){
             binding.btnCreate.id -> {
-                val intent = Intent(this,RegisterActivity::class.java)
+                val intent = Intent(this, RegisterActivity::class.java)
                 startActivity(intent)
             }
             binding.btnLogIn.id -> {
@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     auth.signInWithEmailAndPassword(email,pass)
                         .addOnCompleteListener {
                             if (it.isSuccessful){
-                                val intent = Intent(this,DashboardActivity::class.java)
+                                val intent = Intent(this, DashboardActivity::class.java)
                                 startActivity(intent)
                             }else{
                                 Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show()

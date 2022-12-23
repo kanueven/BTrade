@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/categories"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnCatFuniture"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/furniture"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatTextbooks"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/textbooks"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatMachine"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/machine"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatHousehold"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/household"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatService"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/service"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatElectronics"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/electronics"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatRepair"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/repair"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatVehicle"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/vehicles"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnCatFashion"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/fashion"
+        android:textSize="20sp" />
+</LinearLayout>

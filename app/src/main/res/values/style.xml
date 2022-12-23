@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    //menu style
+    <!--base application theme-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorAccent">@color/bannerbackground</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/black</item>
+    </style>
+    <!--menu style-->
 <style name="navigationTheme">
-    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <!--color of text when selected-->
+    <item name="colorAccent">@color/bannerbackground</item>
+    <!--color of background when selected-->
     <item name="colorControlHighlight">@color/black</item>
 </style>
 

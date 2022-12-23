@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@color/lightwhite"
     android:padding="30dp"
     android:transitionName="transition_login"
-    tools:context=".LoginActivity">
+    tools:context=".activities.LoginActivity">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -61,39 +61,16 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/login_phone_number"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="enter_phone_number"
-            android:textColorHint="@color/black"
-            android:layout_below="@+id/login_username"
-            app:boxStrokeColor="@color/black"
-            app:boxStrokeWidthFocused="2dp"
-            app:endIconMode="clear_text"
-            app:endIconTint="@color/black"
-            app:hintTextColor="@color/black"
-            app:startIconDrawable="@drawable/ic_baseline_phone_24"
-            app:startIconTint="@color/black">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/login_phone_number_editText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="sans-serif-black"
-                android:inputType="phone"
-                android:textColor="@color/black"
-                android:textCursorDrawable="@null" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/login_password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/login_phone_number"
+            android:layout_below="@id/login_username"
             android:hint="enter_password"
             android:textColorHint="@color/black"
             app:boxStrokeColor="@color/black"
@@ -136,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:background="#00000000"
+                android:background="@color/black"
                 android:text="forget_password" />
 
         </RelativeLayout>
@@ -158,7 +135,7 @@
             android:layout_below="@id/btnLogIn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:background="#00000000"
+            android:background="@color/black"
             android:text="Create Account" />
 
         <RelativeLayout

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightwhite"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -99,46 +97,7 @@
 
     </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="0dp"
-            android:layout_height="125dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/colorPrimary"
-            android:layout_weight="1">
-            <RelativeLayout
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:padding="5dp">
-                <ImageView
-                    android:layout_centerHorizontal="true"
-                    android:layout_height="30dp"
-                    android:layout_width="30dp"
-                    android:src="@drawable/ic_baseline_email_24" />
 
-                <TextView
-                    android:fontFamily="sans-serif"
-                    android:id="@+id/user_email2"
-                    android:includeFontPadding="false"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/black"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="njerugathoni@gmail.com"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/user_address2"
-                    android:includeFontPadding="false"
-                    android:textColor="@color/black"
-                    android:layout_below="@id/user_email2"
-                    android:layout_centerHorizontal="true"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="ongatarongai"
-                    android:textSize="20sp" />
-
-            </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>
     <LinearLayout
@@ -180,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_baseline_phone_24"
                 android:drawablePadding="10dp"
-                android:text="Njeru Gathoni"/>
+                android:text="0789654321"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

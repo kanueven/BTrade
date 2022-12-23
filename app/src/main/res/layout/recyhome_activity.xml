@@ -1,55 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="2dp"
+    android:elevation="8dp"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <ImageView
+        android:id="@+id/ft_img"
         android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:background="#ffff">
+        android:layout_height="140dp"
+        android:src="@drawable/bk_ap"
+        android:scaleType="centerCrop"
+        />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/img1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="60dp">
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:scaleType="centerCrop"
-                android:id="@+id/ft_img"
-                android:src="@drawable/bk_ap" />
+    <TextView
+        android:id="@+id/ft_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEXTBOOK"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/ft_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this is anewly used book "
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+
+</LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/ft_title"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/img1"
-            android:text="TEXTBOOK"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-
-
-
-        <TextView
-            android:id="@+id/ft_desc"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@+id/ft_title"
-            android:layout_toRightOf="@+id/img1"
-            android:text="this is anewly used book "
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-
-    </RelativeLayout>
-
-</RelativeLayout>
